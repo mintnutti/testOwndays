@@ -1,9 +1,15 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: "export",
-  basePath: "/testOwndays", // ชื่อ repository ของคุณ
+  reactStrictMode: true,
+  images: {
+    unoptimized: true,
+  },
+  basePath: "/testOwndays",
   assetPrefix: "/testOwndays",
-  reactStrictMode: true, // เปิดการใช้งาน React Strict Mode
   compiler: {
-    styledComponents: true, // ถ้าคุณใช้ styled-components
+    styledComponents: true,
   },
 };
+
+module.exports = nextConfig;
