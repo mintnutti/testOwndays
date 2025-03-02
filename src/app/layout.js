@@ -18,7 +18,7 @@ const Container = styled.div`
 export default function Layout({ children }) {
   const pathname = usePathname();
   const router = useRouter();
-
+  console.log(pathname);
   useEffect(() => {
     if (pathname === "/") {
       router.push("/home");
