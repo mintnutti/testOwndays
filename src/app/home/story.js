@@ -152,13 +152,19 @@ const TextStoryFrist = styled.span`
   font-family: FakePearl-light;
   font-size: 16px;
   line-height: 32px;
-  display: ruby;
+  display: inline;
   letter-spacing: 0.6px;
   margin-bottom: 20px;
-
+  position: relative;
   @media (max-width: ${device.tabletL}) {
     font-size: 14px;
   }
+`;
+
+const Paragraph = styled.span`
+  white-space: pre-line;
+  margin: 0;
+  display: block;
 `;
 
 const TextStorySecond = styled.span`
@@ -167,7 +173,10 @@ const TextStorySecond = styled.span`
   line-height: 22px;
   letter-spacing: 0.6px;
 `;
-
+const InlineSpan = styled.span`
+  display: inline;
+  z-index: 1;
+`;
 export default memo(function Stoty() {
   return (
     <Container>
@@ -177,13 +186,13 @@ export default memo(function Stoty() {
         </DivFristLeft>
         <DivFristRight>
           <TextStoryFrist>
-            某天，喜歡
-            <TextHighlightUI text="戴眼鏡" circleQty={2} />
+            <InlineSpan>某天，喜歡</InlineSpan>
+            <TextHighlightUI text=" 戴眼鏡" circleQty={2} />
             的兩個人，在咖啡廳相遇了。
-            <p style={{ whiteSpace: "pre-line", margin: "0px" }}>
+            <Paragraph>
               兩個人有很多共同興趣，像是旅行、拍攝底片相機、參觀美術展覽與收集眼鏡等，同時也都擁有10副以上的眼鏡！
               很喜歡日本的文青街道，也常常相約在下北澤、吉祥寺和高圓寺等地方。
-            </p>
+            </Paragraph>
             休假時也喜歡窩在咖啡廳裡聊天、交流情報。總是想著有一天也要去台灣跟香港，找尋屬於那個地方的文青日常。
           </TextStoryFrist>
         </DivFristRight>
@@ -199,8 +208,8 @@ export default memo(function Stoty() {
       <DivSecond>
         <DivTextSecond>
           <TextStoryFrist>
-            2023-2024 OWNDAYS特別邀請到日本人氣插畫藝術家 &nbsp;
-            <TextHighlightUI text="『NORITAKE』" circleQty={4} />
+            2023-2024 OWNDAYS特別邀請到日本人氣插畫藝術家&nbsp;
+            <TextHighlightUI text="『NORITAKE』" circleQty={4} left={"-3px"} />
             &nbsp;，為品牌設計出多款極簡文青贈品！
             喜愛NORITAKE的朋友們絕對不可錯過，請密切鎖定OWNDAYS官方消息！
           </TextStoryFrist>
@@ -208,7 +217,10 @@ export default memo(function Stoty() {
             ※ 聯名贈品限單筆消費贈送，數量有限送完為止！
           </TextStorySecond>
           <TextStorySecond>※ 台灣、香港地區限定。</TextStorySecond>
-          <ButtonUI text="前往OWNDAYS官方臉書" />
+          <ButtonUI
+            text="前往OWNDAYS官方臉書"
+            link={"https://www.facebook.com/owndays.th"}
+          />
         </DivTextSecond>
       </DivSecond>
     </Container>

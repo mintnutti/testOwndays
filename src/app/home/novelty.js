@@ -250,6 +250,8 @@ export default memo(function Novelty() {
             text={"全門市滿額限定好禮"}
             circleQty={6}
             size={"45px"}
+            left={"5%"}
+            top={"20%"}
           />
         </Title>
       </DivDescription>
@@ -273,7 +275,13 @@ export default memo(function Novelty() {
         ))}
       </DivCard>
 
-      <ButtonUI text={"尋找附近OWNDAYS門市"} marginTop={"60px"} />
+      <ButtonUI
+        text={"尋找附近OWNDAYS門市"}
+        marginTop={"60px"}
+        link={
+          "https://www.owndays.com/th/th/shops?autoSearchCurrentLocation=true"
+        }
+      />
     </Container>
   );
 });

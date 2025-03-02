@@ -17,18 +17,19 @@ const BannerContainer = styled.div`
   display: flex;
   padding: 9.6% 0;
   @media (max-width: ${device.desktopM}) {
-    padding: 5% 0%;
+    padding: 7% 0%;
   }
   @media (max-width: ${device.desktopS}) {
-    padding: 3% 0;
+    padding: 8% 0;
   }
   @media (max-width: ${device.tabletL}) {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10% 0;
   }
   @media (max-width: ${device.mobile}) {
-    padding: 5% 0;
+    padding: 15% 0;
     background: url(${process.env.PUBLIC_URL}/pic/bg.png) no-repeat;
     background-size: cover;
   }

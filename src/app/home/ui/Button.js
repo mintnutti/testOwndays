@@ -7,6 +7,7 @@ const DivButton = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  color: #000000;
 `;
 
 const showImage = keyframes`
@@ -58,6 +59,7 @@ const ButtonText = styled.span`
   letter-spacing: 0.6px;
   transform: translateY(5px);
   transition: opacity 0.5s ease;
+  color: #000000;
   @media (max-width: ${device.tabletL}) {
     font-size: 14px;
     transform: translateY(1px);
@@ -87,10 +89,10 @@ const Button = styled(({ marginTop, ...rest }) => <button {...rest} />)`
   }
 `;
 
-export default function ButtonUI({ text, marginTop }) {
+export default function ButtonUI({ text, marginTop, link }) {
   return (
     <DivButton>
-      <Button marginTop={marginTop}>
+      <Button marginTop={marginTop} onClick={() => window.open(link)}>
         <ButtonImage src="/pic/btRight.png" />
         <ButtonText>{text}</ButtonText>
       </Button>

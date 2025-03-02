@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const ContainerText = styled.span`
   position: relative;
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   width: fit-content;
@@ -15,6 +15,9 @@ const Text = styled.span`
   position: absolute;
   color: #000000;
   z-index: 1;
+  left: ${({ left }) => (left ? left : "0")};
+  top: ${({ top }) => (top ? top : "0")};
+  transform: "translate(-50%, -50%)";
 `;
 
 const CircleContainer = styled.div`
@@ -28,17 +31,22 @@ const Circle = styled.div`
   height: ${({ size }) => size || "30px"};
   border-radius: 50%;
   background-color: #e7f532;
-  margin-left: -5px;
+  margin-left: -2px;
+  z-index: -2;
 
   &:first-child {
-    margin-left: 0;
+    margin-left: -2px;
   }
 `;
 
-export default function TextHighlightUI({ text, circleQty, size }) {
+export default function TextHighlightUI({ text, circleQty, size, left, top }) {
   return (
     <ContainerText>
-      <Text> {text}</Text> {/* ข้อความจะอยู่ด้านบน */}
+      <Text left={left} top={top}>
+        {" "}
+        {text}
+      </Text>{" "}
+      {/* ข้อความจะอยู่ด้านบน */}
       <CircleContainer>
         {Array.from({ length: circleQty }).map((_, index) => (
           <Circle key={index} size={size} />

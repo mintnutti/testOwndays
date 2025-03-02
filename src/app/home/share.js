@@ -79,15 +79,33 @@ export default memo(function Share() {
           </DivTitle>
 
           <DivLogoShare displayTabletL={"false"}>
-            <ImgLogo src="/pic/fb.png" />
-            <ImgLogo src="/pic/line.png" />
-            <ImgLogo src="/pic/twitter.png" />
+            <ImgLogo
+              src="/pic/fb.png"
+              onClick={() => window.open("https://www.facebook.com/owndays.th")}
+            />
+            <ImgLogo
+              src="/pic/line.png"
+              onClick={() => window.open("https://page.line.me/nrk3847l")}
+            />
+            <ImgLogo
+              src="/pic/twitter.png"
+              onClick={() => window.open("https://x.com/OWNDAYS_TH")}
+            />
           </DivLogoShare>
 
           <DivLogoShare displayTabletL={"true"}>
-            <ImgLogo src="/pic/fb-sp.svg" />
-            <ImgLogo src="/pic/line-sp.svg" />
-            <ImgLogo src="/pic/twitter-sp.svg" />
+            <ImgLogo
+              src="/pic/fb-sp.svg"
+              onClick={() => window.open("https://www.facebook.com/owndays.th")}
+            />
+            <ImgLogo
+              src="/pic/line-sp.svg"
+              onClick={() => window.open("https://page.line.me/nrk3847l")}
+            />
+            <ImgLogo
+              src="/pic/twitter-sp.svg"
+              onClick={() => window.open("https://x.com/OWNDAYS_TH")}
+            />
           </DivLogoShare>
         </DivShareInside>
       </DivShare>
