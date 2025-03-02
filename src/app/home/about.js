@@ -4,9 +4,16 @@ import styled from "styled-components";
 import TitleUI from "./ui/Title";
 import { device } from "../device";
 const Container = styled.div`
-  padding: 0px 80px;
+  padding: 0px 180px;
   margin-top: 150px;
   margin-bottom: 150px;
+  max-width: 1440px;
+  @media (max-width: ${device.desktopM}) {
+    padding: 0px 100px;
+  }
+  @media (max-width: ${device.desktopS}) {
+    padding: 0px 70px;
+  }
   @media (max-width: ${device.tabletL}) {
     padding: 0px 40px;
   }
