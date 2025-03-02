@@ -4,7 +4,8 @@ import HomePage from "./home/page";
 export default function Home() {
   return (
     <div>
-      <HomePage />
+      <h1>Welcome to Your Custom Website!</h1>
+      <p>This is your custom content.</p>
     </div>
   );
 }
