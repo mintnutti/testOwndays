@@ -2,14 +2,13 @@
   "name": "owndays",
   "version": "0.1.0",
   "private": true,
-  "homepage": " https://mintnutti.github.io/testOwndays/",
+  "homepage": "https://mintnutti.github.io/testOwndays/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "predeploy": "next build && next export",
-    "deploy": "gh-pages -d build"
+    "predeploy": "next build",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.26.9",
